@@ -44,6 +44,16 @@ nav, .servicios, .presentacion, .footer-content {
   margin-bottom: 10%;
 }
 
+.Contact {
+  background-image: url(../Assets/Imagenes/contact-image.png);
+  background-size: contain;
+  text-align: justify;
+  -webkit-text-size-adjust: 4.0rem;
+     -moz-text-size-adjust: 4.0rem;
+      -ms-text-size-adjust: 4.0rem;
+          text-size-adjust: 4.0rem;
+}
+
 p {
   font-size: 1.8rem;
   color: #868484;
@@ -61,6 +71,16 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: lighter;
+}
+
+h4 {
+  font-size: 4rem;
+  color: black;
+}
+
+h5 {
+  font-size: 3rem;
+  color: #860606;
 }
 
 .btn, .btn-principal {
