@@ -18,8 +18,9 @@ body{
     line-height: 1.6;
     font-family: 'Noto Sans JP', sans-serif;
     background-image: url(../Assets/Imagenes/slider-1.png);
-    background-size: auto;
-    background-position: initial;
+    height: 768px;
+    //height: 100vh;
+    width: 100vw;
 }
 
 ul{
@@ -36,9 +37,63 @@ a{
 img{
     width: 70%;
     height: auto;
-    
 }
 
+.cuadrado{
+    top: 912px;
+left: 0px;
+width: 32px;
+height: 384px;
+background: var(--unnamed-color-e0752f) 0% 0% no-repeat padding-box;
+background: #E0752F 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+    
+.tipo-servicios, .cuadrado2{
+    background-image: url(../Assets/Imagenes/section3-image.png);
+    justify-content: right;
+    top: 1800px;
+left: 695px;
+width: 471px;
+height: 304px;
+background: var(--unnamed-color-e0752f) 0% 0% no-repeat padding-box;
+background: #E0752F 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.acordeon{
+    $accordion-padding-y:                     1rem;
+$accordion-padding-x:                     1.25rem;
+$accordion-color:                         $body-color;
+$accordion-bg:                            $body-bg;
+$accordion-border-width:                  $border-width;
+$accordion-border-color:                  rgba($black, .125);
+$accordion-border-radius:                 $border-radius;
+$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
+
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-color:                  $accordion-color;
+$accordion-button-bg:                     $accordion-bg;
+$accordion-transition:                    $btn-transition, border-radius .15s ease;
+$accordion-button-active-bg:              tint-color($component-active-bg, 90%);
+$accordion-button-active-color:           shade-color($primary, 10%);
+
+$accordion-button-focus-border-color:     $input-focus-border-color;
+$accordion-button-focus-box-shadow:       $btn-focus-box-shadow;
+
+$accordion-icon-width:                    1.25rem;
+$accordion-icon-color:                    $accordion-button-color;
+$accordion-icon-active-color:             $accordion-button-active-color;
+$accordion-icon-transition:               transform .2s ease-in-out;
+$accordion-icon-transform:                rotate(-180deg);
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
 
 nav, .servicios, .presentacion, .footer-content{
     width: 80%;
@@ -50,9 +105,10 @@ nav, .servicios, .presentacion, .footer-content{
 }
 
 .Contact{
-    background-image: url(../Assets/Imagenes/contact-image.png);
-    text-align: justify;
-    text-size-adjust: 4.0rem;
+    background-image: url(../Assets/Imagenes/contact-image@2x.png);
+    height: auto;
+    max-width: 100%;
+    
 }
 
 //Variables
@@ -81,16 +137,19 @@ h2{
 h3{
     font-size: $font-h3;
     font-weight: lighter;
+    color: white;
 }
 
 h4{
     font-size: $font-h4;
     color: black;
+    text-align: center;
 }
 
 h5{
     font-size: $font-h5;
-    color: rgb(134, 6, 6);
+    color: rgb(0, 253, 156);
+    text-align: justify;
 }
 
 .btn{
@@ -108,6 +167,19 @@ h5{
     @extend .btn;
     color: #fff;
     background-color: darkorange;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    
+}
+
+.btn-mandar{
+    @extend .btn;
+    color: white;
+    background-color: orange;
+    -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
 }
 
 //Mixins
